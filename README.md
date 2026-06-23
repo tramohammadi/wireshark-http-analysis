@@ -126,7 +126,11 @@ RTT Value:
 ---
 
 # Performance Analysis
-
+If the **Delta Time** scheduling layer takes more than 2 seconds, the root cause is most likely related to **internal server processing** rather than the client or bandwidth.
+A high Delta Time value can indicate CPU overload, blocked threads, long processing queues, or slow internal services on the server.
+Client-side issues usually appear as frame drops, rendering delays, or local performance problems, not increased server processing time.
+Bandwidth problems mainly cause network latency, packet loss, or delayed data transfer, but they do not directly increase processing Delta Time.
+To identify the real cause, CPU usage, I/O delays, request queues, and network latency should be monitored separately.
 
 ---
 
